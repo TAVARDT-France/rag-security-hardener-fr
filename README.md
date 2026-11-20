@@ -1,4 +1,4 @@
-# Validateur et Sécurisation de Pipelines RAG - TAVARDT France
+# Validateur et Sécurisation de Pipelines RAG
 
 > Audit d'Isolation de Contexte, Prévention des Injections Indirectes et Protection Défensive de l'IA
 
