@@ -13,7 +13,7 @@ L'architecture de Génération Augmentée par Récupération (RAG) introduit des
 
 Ce dépôt fournit une application web interactive s'exécutant 100% dans le navigateur ainsi qu'un outil CLI Python sans dépendance externe pour auditer les architectures RAG et générer des modèles de sécurisation défensive.
 
-## Application Web Interactive (GitHub Pages)
+## Application Web Interactive
 
 Accédez à l'outil en ligne et auditez votre pipeline en temps réel :
 
