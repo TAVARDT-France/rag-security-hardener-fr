@@ -11,9 +11,6 @@ Développé et maintenu par la division d'ingénierie de sécurité en intellige
 
 ***
 
-
-***
-
 ## Démonstration en Ligne & Hub d'Architecture Défensive
 
 Vous pouvez consulter les spécifications techniques, les diagnostics architecturaux et les blueprints de durcissement directement dans votre navigateur :
@@ -50,6 +47,14 @@ python3 rag_security_auditor.py
 # 3. Exporter les résultats au format JSON structuré
 python3 rag_security_auditor.py -json
 ```
+
+***
+
+## Liens Utiles
+
+* **Portail Entreprise:** https://ag.tavardt.com/fr/
+* **Suite de Diagnostic:** https://tools.tavardt.com/fr/
+* **Contact Technique:** https://ag.tavardt.com/fr/contact/
 
 ***
 
