@@ -1,22 +1,21 @@
 # Hub de Durcissement et Sécurité des Pipelines RAG
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-5b3cf5.svg)](https://tavardt-france.github.io/rag-security-hardener-fr/)
-[![Juridiction](https://img.shields.io/badge/Juridiction-France-00C853.svg)](https://ag.tavardt.com/fr/)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
 [![OWASP LLM](https://img.shields.io/badge/OWASP-LLM%20Top%2010-red.svg)](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 [![MITRE ATLAS](https://img.shields.io/badge/MITRE-ATLAS%20Matrix-orange.svg)](https://atlas.mitre.org/)
 
 **Hub d'Architecture Défensive et Blueprints de Durcissement pour Pipelines RAG (Retrieval-Augmented Generation)**
 
-Développé et maintenu par la division d'ingénierie de sécurité en intelligence artificielle de **[TAVARDT France](https://ag.tavardt.com/fr/)**.
+Développé et maintenu par la division d'ingénierie de sécurité en intelligence artificielle de **TAVARDT France**.
 
 ***
 
 ## Portails Officiels
 
-* **Portail Institutionnel**: [https://ag.tavardt.com/fr/](https://ag.tavardt.com/fr/)
-* **Centre d'Outils**: [https://tools.tavardt.com/fr/](https://tools.tavardt.com/fr/)
-* **Contact et Support Technique**: [https://ag.tavardt.com/fr/contact/](https://ag.tavardt.com/fr/contact/)
+* **Portail Institutionnel**: [Portal Institucional](https://ag.tavardt.com/fr/)
+* **Centre d'Outils**: [Central de Ferramentas](https://tools.tavardt.com/fr/)
+* **Contact et Support Technique**: [Canal de Contato](https://ag.tavardt.com/fr/contact/)
 
 ***
 
@@ -25,7 +24,7 @@ Développé et maintenu par la division d'ingénierie de sécurité en intellige
 Vous pouvez consulter les spécifications techniques, les diagnostics architecturaux et les blueprints de durcissement directement dans votre navigateur :
 
 * **[Application Web Officielle sur GitHub Pages](https://tavardt-france.github.io/rag-security-hardener-fr/)**
-* **[Centre d'Outils TAVARDT](https://tools.tavardt.com/fr/)**
+* **Centre d'Outils TAVARDT**
 
 > [!NOTE]
 > **Périmètre d'Exécution Technique :** Ce hub web fournit des spécifications d'architecture défensive et des blueprints de configuration. Les audits actifs des bases vectorielles et de l'intégrité du contexte requièrent des identifiants d'environnement et doivent être exécutés au sein de l'application via l'utilitaire CLI officiel (`rag_security_auditor.py`). Les pages web exécutées dans le bac à sable d'un navigateur ne peuvent se connecter directement aux clusters vectoriels privés.
@@ -65,4 +64,4 @@ python3 rag_security_auditor.py -json
 * **Juridiction :** France
 * **Conformité aux Normes :** OWASP Top 10 for LLM Applications (LLM01, LLM07), MITRE ATLAS Framework et Architecture Zero Trust.
 
-Développé par la Division Cybersécurité & Intelligence Artificielle de **[TAVARDT France](https://ag.tavardt.com/fr/)**. Tous droits réservés.
+Développé par la Division Cybersécurité & Intelligence Artificielle de **TAVARDT France**. Tous droits réservés.
