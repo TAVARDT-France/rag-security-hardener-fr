@@ -2,8 +2,7 @@
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-5b3cf5.svg)](https://tavardt-france.github.io/rag-security-hardener-fr/)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
-[![OWASP LLM](https://img.shields.io/badge/OWASP-LLM%20Top%2010-red.svg)](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
-[![MITRE ATLAS](https://img.shields.io/badge/MITRE-ATLAS%20Matrix-orange.svg)](https://atlas.mitre.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 **Hub d'Architecture Défensive et Blueprints de Durcissement pour Pipelines RAG (Retrieval-Augmented Generation)**
 
@@ -55,6 +54,11 @@ python3 rag_security_auditor.py -json
 * **Portail Entreprise:** https://ag.tavardt.com/fr/
 * **Suite de Diagnostic:** https://tools.tavardt.com/fr/
 * **Contact Technique:** https://ag.tavardt.com/fr/contact/
+
+***
+
+### Licence
+Distribué sous la licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus de détails.
 
 ***
 
