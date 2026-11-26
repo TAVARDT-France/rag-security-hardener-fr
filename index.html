@@ -1116,7 +1116,53 @@ python rag_security_auditor.py</div>
 </section>
 <section class="faq-section">
 <h2 class="faq-title">Foire Aux Questions sur la Sécurité des Pipelines RAG et Bases Vectorielles</h2>
-<div class="faq-list"><div class="faq-item"><div class="faq-question">Pourquoi la validation de sécurité des pipelines RAG ne doit-elle pas connecter les bases vectorielles via le navigateur ?<span class="faq-toggle">+</span></div><div class="faq-answer">Les bases vectorielles de production contiennent des identifiants d'API critiques et des données confidentielles protégées par VPC et pare-feu. Connecter des instances vectorielles directement via le navigateur exposerait ces identifiants et enfreindrait le principe du moindre privilège. C'est pourquoi TAVARDT fournit des blueprints architecturaux et des outils CLI pour un audit local et sécurisé.</div></div><div class="faq-item"><div class="faq-question">Qu'est-ce que l'Indirect Prompt Injection et comment compromet-elle les architectures RAG ?<span class="faq-toggle">+</span></div><div class="faq-answer">L'Indirect Prompt Injection survient lorsque des documents externes indexés dans la base vectorielle contiennent des instructions malveillantes dissimulées. Lorsque le pipeline RAG récupère ces fragments et les concatène dans le prompt du LLM, le modèle peut dévier de ses instructions d'origine, exécutant des commandes illégitimes ou exfiltrant des données sensibles.</div></div><div class="faq-item"><div class="faq-question">Comment l'isolation du contexte avec des délimiteurs structurés atténue-t-elle les injections indirectes ?<span class="faq-toggle">+</span></div><div class="faq-answer">En encapsulant les données récupérées dans des blocs délimités (tels que des balises XML &lt;context&gt;...&lt;/context&gt;) et en ordonnant au modèle de traiter le contenu strictement comme donnée passive de référence, on crée une frontière sémantique nette qui empêche l'interpréteur du LLM de traiter les instructions tierces comme des commandes exécutables.</div></div><div class="faq-item"><div class="faq-question">Quelle est l'importance du contrôle d'accès basé sur les métadonnées (ACL/RBAC) dans les recherches vectorielles ?<span class="faq-toggle">+</span></div><div class="faq-answer">Dans les environnements d'entreprise, différents utilisateurs disposent de différents niveaux d'autorisation. Le contrôle par métadonnées garantit que la requête vectorielle applique des filtres obligatoires d'identité et de rôle avant la recherche par similarité, empêchant un utilisateur de récupérer des fragments confidentiels auxquels il n'a pas droit d'accès.</div></div><div class="faq-item"><div class="faq-question">Quelles bonnes pratiques doivent être adoptées dans le pipeline d'ingestion de documents ?<span class="faq-toggle">+</span></div><div class="faq-answer">La chaîne d'ingestion doit effectuer l'assainissement du texte, la suppression des caractères de contrôle invisibles, la vérification de l'intégrité de la source (source verification), un découpage (chunking) standardisé et la détection des motifs d'injection avant la génération et le stockage des embeddings dans la base vectorielle.</div></div></div>
+<div class="faq-list">
+  <div class="faq-item">
+    <button class="faq-btn" onclick="toggleFaq(this)" type="button">
+      <span>Pourquoi la validation de sécurité des pipelines RAG ne doit-elle pas connecter les bases vectorielles via le navigateur ?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-body">
+      Les bases vectorielles de production contiennent des identifiants d'API critiques et des données confidentielles protégées par VPC et pare-feu. Connecter des instances vectorielles directement via le navigateur exposerait ces identifiants et enfreindrait le principe du moindre privilège. C'est pourquoi TAVARDT fournit des blueprints architecturaux et des outils CLI pour un audit local et sécurisé.
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-btn" onclick="toggleFaq(this)" type="button">
+      <span>Qu'est-ce que l'Indirect Prompt Injection et comment compromet-elle les architectures RAG ?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-body">
+      L'Indirect Prompt Injection survient lorsque des documents externes indexés dans la base vectorielle contiennent des instructions malveillantes dissimulées. Lorsque le pipeline RAG récupère ces fragments et les concatène dans le prompt du LLM, le modèle peut dévier de ses instructions d'origine, exécutant des commandes illégitimes ou exfiltrant des données sensibles.
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-btn" onclick="toggleFaq(this)" type="button">
+      <span>Comment l'isolation du contexte avec des délimiteurs structurés atténue-t-elle les injections indirectes ?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-body">
+      En encapsulant les données récupérées dans des blocs délimités (tels que des balises XML <context>...</context>) et en ordonnant au modèle de traiter le contenu strictement comme donnée passive de référence, on crée une frontière sémantique nette qui empêche l'interpréteur du LLM de traiter les instructions tierces comme des commandes exécutables.
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-btn" onclick="toggleFaq(this)" type="button">
+      <span>Quelle est l'importance du contrôle d'accès basé sur les métadonnées (ACL/RBAC) dans les recherches vectorielles ?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-body">
+      Dans les environnements d'entreprise, différents utilisateurs disposent de différents niveaux d'autorisation. Le contrôle par métadonnées garantit que la requête vectorielle applique des filtres obligatoires d'identité et de rôle avant la recherche par similarité, empêchant un utilisateur de récupérer des fragments confidentiels auxquels il n'a pas droit d'accès.
+    </div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-btn" onclick="toggleFaq(this)" type="button">
+      <span>Quelles bonnes pratiques doivent être adoptées dans le pipeline d'ingestion de documents ?</span>
+      <span class="faq-icon">+</span>
+    </button>
+    <div class="faq-body">
+      La chaîne d'ingestion doit effectuer l'assainissement du texte, la suppression des caractères de contrôle invisibles, la vérification de l'intégrité de la source (source verification), un découpage (chunking) standardisé et la détection des motifs d'injection avant la génération et le stockage des embeddings dans la base vectorielle.
+    </div>
+  </div>
+</div>
 </section>
 
 <div class="cta-card">
